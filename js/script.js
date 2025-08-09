@@ -1,6 +1,6 @@
 // --- Add to cart: always +1 ---
 window.addToCart = function(itemName) {
-  alert(`Added 1 × ${itemName} to your cart!`);
+  alert(`Added 1 × ${itemName} to your cart! Functionality coming soon...`);
 };
 
 // --- Image Modal ---
@@ -24,7 +24,7 @@ window.addToCart = function(itemName) {
     }
     modal.classList.add('open');
     document.body.classList.add('modal-open');
-    closeBtn.focus();
+    modal.focus?.();
   }
 
   function closeModal() {

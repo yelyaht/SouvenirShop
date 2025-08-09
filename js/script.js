@@ -55,13 +55,6 @@ window.addToCart = function(itemName) {
   -webkit-tap-highlight-color: transparent; /* mobile tap flash */
 }
 
-/* Keep an accessible focus style for keyboard users */
-.modal-close:focus-visible {
-  outline: 2px solid #fffdd8;
-  outline-offset: 2px;
-  box-shadow: none;
-}
-
 /* If any browser still shows a ring on non-keyboard focus, nuke it */
 .modal-close:focus:not(:focus-visible) {
   outline: none;

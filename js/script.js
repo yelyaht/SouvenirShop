@@ -50,19 +50,6 @@ window.addToCart = function(itemName) {
   });
 }
 
-/* Close button focus styling */
-.modal-close {
-  outline: none;              /* remove default ring */
-  box-shadow: none;           /* Safari sometimes uses box-shadow */
-  -webkit-tap-highlight-color: transparent; /* mobile tap flash */
-}
-
-/* If any browser still shows a ring on non-keyboard focus, nuke it */
-.modal-close:focus:not(:focus-visible) {
-  outline: none;
-  box-shadow: none;
-}
-
   // Close actions
   closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', (e) => {

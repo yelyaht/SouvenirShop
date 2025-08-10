@@ -331,11 +331,16 @@ footer {
   -webkit-tap-highlight-color: transparent;
 }
 
+.modal, .modal * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.modal-close,
 .modal-close:focus,
 .modal-close:focus-visible,
 .modal-close:active {
-  outline: none !important; 
-  box-shadow: none !important; 
+  outline: none !important;
+  box-shadow: none !important;
   outline-color: transparent !important;
 }
 

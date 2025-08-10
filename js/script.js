@@ -13,21 +13,22 @@ window.addToCart = function(itemName) {
   if (!modal || !modalImg || !closeBtn) return;
 
   function openModal(src, alt, captionText) {
-    modalImg.src = src;
-    modalImg.alt = alt || '';
-    if (captionText) {
-      modalCaption.textContent = captionText;
-      modalCaption.removeAttribute('aria-hidden');
-    } else {
-      modalCaption.textContent = '';
-      modalCaption.setAttribute('aria-hidden', 'true');
-    }
-    modal.classList.add('open');
-    document.body.classList.add('modal-open');
-
-    // Move focus to the modal container (not the button) to avoid any button focus ring
-    modal.focus?.();
+  modalImg.src = src;
+  modalImg.alt = alt || '';
+  if (captionText) {
+    modalCaption.textContent = captionText;
+    modalCaption.removeAttribute('aria-hidden');
+  } else {
+    modalCaption.textContent = '';
+    modalCaption.setAttribute('aria-hidden', 'true');
   }
+  modal.classList.add('open');
+  document.body.classList.add('modal-open');
+
+  // focus the modal itself, not the close button
+  modal.setAttribute('tabindex', '-1');
+  modal.focus();
+}
 
   function closeModal() {
     modal.classList.remove('open');
@@ -50,18 +51,10 @@ window.addToCart = function(itemName) {
 
     openModal(fullSrc, alt, captionText);
   });
-/*
-  // Close actions
-  closeBtn.addEventListener('click', closeModal);
-  // Prevent mouse click from giving the button focus (extra insurance)
-  closeBtn.addEventListener('mousedown', (e) => e.preventDefault());
-  // if any browser focuses it on click, immediately blur it
-  closeBtn.addEventListener('click', () => closeBtn.blur());
 
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal(); // click outside inner
-  });
-*/
+  closeBtn.addEventListener('mousedown', e => e.preventDefault()); // stop focus on click
+  closeBtn.addEventListener('click', () => closeBtn.blur());       // blur if it gets focus anyway
+  
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
   });

@@ -330,6 +330,8 @@ footer {
   background: #0f52ba;
   color: #fffdd8;
   box-shadow: 0 4px 12px rgba(0,0,0,.35);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body.modal-open { overflow: hidden; }  /* prevent page scroll while modal is open */

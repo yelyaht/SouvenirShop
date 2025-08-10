@@ -25,8 +25,8 @@ window.addToCart = function(itemName) {
     modal.classList.add('open');
     document.body.classList.add('modal-open');
 
-    // Keep accessibility, but hide mouse ring via CSS :focus-visible
-    closeBtn.focus();
+    // Move focus to the modal container (not the button) to avoid any button focus ring
+    modal.focus?.();
   }
 
   function closeModal() {
@@ -52,10 +52,14 @@ window.addToCart = function(itemName) {
   });
 
   // Close actions
+  closeBtn.addEventListener('click', closeModal);
+  // Prevent mouse click from giving the button focus (extra insurance)
   closeBtn.addEventListener('mousedown', (e) => e.preventDefault());
+
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeModal(); // click outside inner
   });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
   });

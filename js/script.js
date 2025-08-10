@@ -50,7 +50,7 @@ window.addToCart = function(itemName) {
 
     openModal(fullSrc, alt, captionText);
   });
-
+/*
   // Close actions
   closeBtn.addEventListener('click', closeModal);
   // Prevent mouse click from giving the button focus (extra insurance)
@@ -61,7 +61,7 @@ window.addToCart = function(itemName) {
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeModal(); // click outside inner
   });
-
+*/
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
   });

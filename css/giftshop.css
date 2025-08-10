@@ -329,9 +329,17 @@ footer {
   cursor: pointer;
   background: #0f52ba;
   color: #fffdd8;
-  box-shadow: none;
-  outline: none;
+  box-shadow: none !important;
+  outline: none !important;
   -webkit-tap-highlight-color: transparent;
+}
+
+.modal-close:focus,
+.modal-close:focus-visible,
+.modal-close:active {
+  outline: none !important;
+  box-shadow: none !important;
+  outline-color: transparent !important;   
 }
 
 body.modal-open { overflow: hidden; }  /* prevent page scroll while modal is open */

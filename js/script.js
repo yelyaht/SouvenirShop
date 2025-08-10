@@ -52,7 +52,7 @@ window.addToCart = function(itemName) {
   });
 
   // Close actions
-  closeBtn.addEventListener('click', closeModal);
+  closeBtn.addEventListener('mousedown', (e) => e.preventDefault());
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeModal(); // click outside inner
   });

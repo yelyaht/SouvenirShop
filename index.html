@@ -184,14 +184,13 @@
   </div>
 
   <!-- Modal -->
-  <img
-    id="modalImg"
-    src="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
-    alt=""
-    width="1"
-    height="1"
-    decoding="async"
-    loading="lazy">
+  <div id="imageModal" class="modal" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-inner" role="document">
+    <button class="modal-close" aria-label="Close image (Esc)">&times;</button>
+    <img id="modalImg" alt="">
+    <p id="modalCaption" class="modal-caption" aria-hidden="true"></p>
+  </div>
+</div>
 
   <script src="js/script.js"></script>
 </body>

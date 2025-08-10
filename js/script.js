@@ -55,6 +55,8 @@ window.addToCart = function(itemName) {
   closeBtn.addEventListener('click', closeModal);
   // Prevent mouse click from giving the button focus (extra insurance)
   closeBtn.addEventListener('mousedown', (e) => e.preventDefault());
+  // if any browser focuses it on click, immediately blur it
+  closeBtn.addEventListener('click', () => closeBtn.blur());
 
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeModal(); // click outside inner

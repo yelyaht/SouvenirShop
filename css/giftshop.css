@@ -341,7 +341,6 @@ footer {
 .modal-close:active {
   outline: none !important;
   box-shadow: none !important;
-  outline-color: transparent !important;
 }
 
 /* The modal container also shouldn't show a ring when focused */

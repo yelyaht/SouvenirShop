@@ -327,9 +327,9 @@ footer {
   font-size: 28px;
   line-height: 40px;
   cursor: pointer;
-  /* background: #0f52ba; */
+  background: #0f52ba;
   color: #fffdd8;
-  box-shadow: 0 4px 12px rgba(0,0,0,.35);
+  box-shadow: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }

@@ -335,6 +335,10 @@ footer {
   -webkit-tap-highlight-color: transparent;
 }
 
+.modal, .modal * { 
+  -webkit-tap-highlight-color: transparent; 
+}
+
 .modal-close,
 .modal-close:focus,
 .modal-close:focus-visible,
@@ -343,7 +347,6 @@ footer {
   box-shadow: none !important;
 }
 
-/* The modal container also shouldn't show a ring when focused */
 .modal:focus { 
   outline: none !important; 
 }

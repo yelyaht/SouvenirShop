@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart – Souvenir Shop</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Hayley Tymony">
+  <link rel="stylesheet" href="../../css/global-modal.css">
+  <link rel="stylesheet" href="../../css/souvenir/cart.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>Souvenir Shop — Checkout</h1>
+      <div class="nav-buttons">
+        <button onclick="location.href='../../index.html'">Home</button>
+        <button onclick="location.href='../staff/staff.html'">Staff</button>
+        <button onclick="location.href='../collections/collections.html'">Collections</button>
+        <button onclick="location.href='shop.html'">Shop</button>
+      </div>
+    </header>
+
+  <div class="background-wrap">
+    <div class="sub-nav-buttons">
+      <button onclick="history.back()">← Back</button>
+    </div>
+    <main class="cart-wrap">
+      <!-- Controls -->
+      <div class="cart-topbar">
+       <label class="member-toggle">
+         <input id="memberCheckbox" type="checkbox" aria-label="Member pricing" />
+         Member pricing (15% off)
+       </label>
+
+       <div class="topbar-actions">
+         <button id="keepShoppingBtn" aria-label="Keep Shopping">Keep Shopping</button>
+         <button id="clearCartBtn" aria-label="Clear Cart">Clear Cart</button>
+       </div>
+      </div>
+
+      <!-- Single render target -->
+      <div id="cartRoot" aria-live="polite"></div>
+    </div>
+  </main>
+</div>
+
+    <footer>
+      <p>This is a fictitious website created purely for academic purposes.</p>
+      <p>This project may include content generated with AI assistance.</p>
+    </footer>
+  </div>
+
+  <script src="../../js/souvenir/cart.js"></script>
+</body>
+</html>

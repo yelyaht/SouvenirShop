@@ -5,7 +5,8 @@
   <title>Souvenir Shop - Mythical Creature Museum</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="author" content="Hayley Tymony">
-  <link rel="stylesheet" href="css/giftshop.css">
+  <link rel="stylesheet" href="../../css/global-modal.css">
+  <link rel="stylesheet" href="../../css/souvenir/giftshop.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,38 +14,48 @@
     <header>
       <h1>Souvenir Shop</h1>
       <div class="nav-buttons">
-        <button onclick="location.href='https://yelyaht.github.io/Museum/'">Home</button>
-        <button onclick="location.href='https://yelyaht.github.io/MuseumStaff/'">Staff</button>
-        <button onclick="location.href='https://yelyaht.github.io/Museum/html/collections.html'">Collections</button>
+        <button onclick="location.href='../../index.html'">Home</button>
+        <button onclick="location.href='../staff/staff.html'">Staff</button>
+        <button onclick="location.href='../collections/collections.html'">Collections</button>
+        <button onclick="location.href='cart.html'">View Cart <span id="cartCount" aria-live="polite"></span></button>
       </div>
     </header>
 
     <div class="background-wrap">
       <div class="sub-nav-buttons">
-        <button onclick="location.href='https://yelyaht.github.io/MuseumArAn/'">Archeology</button>
-        <button onclick="location.href='https://yelyaht.github.io/MuseumArAn/html/anthropology.html'">Anthropology</button>
+        <button onclick="history.back()">← Back</button>
+        <button onclick="location.href='../artifact/archeology/archeology.html'">Archeology</button>
+        <button onclick="location.href='../artifact/anthropology/anthropology.html'">Anthropology</button>
       </div>
 
       <main class="home-columns">
         <section class="hero">
           <h2>Welcome to The Enchanted Emporium</h2>
           <p>
-            Step into a marketplace woven from the threads of myth and memory, where every trinket carries a whisper of the worlds beyond. Here, relics of forgotten realms rest beside charms born of fireside tales, each infused with the essence of creatures long sung about in hushed tones. From dragon-scale curios to moonlit talismans, every piece holds a fragment of wonder—waiting to find its way into your keeping. This is no ordinary shop; it is a gateway, a place where souvenirs become storykeepers, and the magic of legend can follow you home.
-          </p>
+            Step into a marketplace woven from the threads of myth and memory, where every trinket carries a
+            whisper of the worlds beyond. Here, relics of forgotten realms rest beside charms born of fireside
+            tales, each infused with the essence of creatures long sung about in hushed tones. From dragon-scale
+            curios to moonlit talismans, every piece holds a fragment of wonder—waiting to find its way into
+            your keeping. This is no ordinary shop; it is a gateway, a place where souvenirs become storykeepers,
+            and the magic of legend can follow you home.</p>
         </section>
 
         <div class="creature-grid">
           <!-- 1 -->
           <div class="creature-card">
-            <h3><a href="https://yelyaht.github.io/Museum/html/dragons.html">Draconis Altiventris</a></h3>
+            <h3><a href="../collections/dragons/dragons.html">Draconis Altiventris</a></h3>
             <div class="card-content">
               <div class="card-image">
-                <img src="images/dragart.jpg" alt="Dragon image">
+                <img src="../../images/souvenir/dragart.jpg" alt="Dragon image">
               </div>
               <div class="card-text">
                 <p>
-                  Replica of a rare fragment from the thoracic frame of the legendary Draconis altiventris, believed to aid in the creature’s fiery breath. This 1.3-meter fossil, with its ridged underside and slate-ochre hues, was unearthed from volcanic ash layers in the Southern Caucasus. Scorch marks and mineralized marrow hint at a life steeped in heat and flame—making it a tangible relic of dragonkind’s mythic past.
-                </p>
+                  Replica of a rare fragment from the thoracic frame of the legendary Draconis altiventris,
+                  believed to aid in the creature’s fiery breath. This 1.3-meter fossil, with its ridged
+                  underside and slate-ochre hues, was unearthed from volcanic ash layers in the Southern
+                  Caucasus. Scorch marks and mineralized marrow hint at a life steeped in heat and flame—making
+                  it a tangible relic of dragonkind’s mythic past.</p>
+                  <p>Click the title to journey deeper into their lore and uncover the myths that shaped their legend.</p>
                 <p><strong>Price:</strong> $90.00</p>
                 <div class="card-actions">
                   <button class="add-to-cart"
@@ -59,15 +70,19 @@
 
           <!-- 2 -->
           <div class="creature-card">
-            <h3><a href="https://yelyaht.github.io/Museum/html/sirens.html">Siren Laryngeal Crest</a></h3>
+            <h3><a href="../collections/sirens/sirens.html">Siren Laryngeal Crest</a></h3>
             <div class="card-content">
               <div class="card-image">
-                <img src="images/siart.jpg" alt="Siren image">
+                <img src="../../images/souvenir/siart.jpg" alt="Siren image">
               </div>
               <div class="card-text">
                 <p>
-                  Replica of a rare spiral of calcified cartilage from the fabled midnight siren, believed to house the organ that shaped her hypnotic song. Preserved for over five millennia in a tidal cave of the Aegean, its iridescent ridges shimmer under ultraviolet light, whispering of moonlit waters and voices that could still the storm. A haunting relic of oceanic myth, captured in the hush of the deep.
-                </p>
+                  Replica of a rare spiral of calcified cartilage from the fabled midnight siren,
+                  believed to house the organ that shaped her hypnotic song. Preserved for over
+                  five millennia in a tidal cave of the Aegean, its iridescent ridges shimmer under
+                  ultraviolet light, whispering of moonlit waters and voices that could still the storm.
+                  A haunting relic of oceanic myth, captured in the hush of the deep.</p>
+                  <p>Click the title to journey deeper into their lore and uncover the myths that shaped their legend.</p>
                 <p><strong>Price:</strong> $75.00</p>
                 <div class="card-actions">
                   <button class="add-to-cart"
@@ -82,15 +97,18 @@
 
           <!-- 3 -->
           <div class="creature-card">
-            <h3><a href="https://yelyaht.github.io/MuseumV/" class="creature-link">Bloodbound Cradle Stone</a></h3>
+            <h3><a href="../collections/vampire/vampire.html" class="creature-link">Bloodbound Cradle Stone</a></h3>
             <div class="card-content">
               <div class="card-image">
-                <img src="images/vamart.jpg" alt="Vampire image">
+                <img src="../../images/souvenir/vamart.jpg" alt="Vampire image">
               </div>
               <div class="card-text">
                 <p>
-                  Replica of an oval altar of hematite-laced limestone, its smooth basin once cradled rites of blood and rebirth. Carved over four millennia ago and sealed deep within the Ghorat Caverns, the stone bears faint spirals and claw-scratches—silent witnesses to ancient transformations. Cool to the touch yet heavy with legend, it is a relic steeped in the shadowed heart of vampire lore.
-                </p>
+                  Replica of an oval altar of hematite-laced limestone, its smooth basin once cradled rites
+                  of blood and rebirth. Carved over four millennia ago and sealed deep within the Ghorat Caverns,
+                  the stone bears faint spirals and claw-scratches—silent witnesses to ancient transformations.
+                  Cool to the touch yet heavy with legend, it is a relic steeped in the shadowed heart of vampire lore.</p>
+                  <p>Click the title to journey deeper into their lore and uncover the myths that shaped their legend.</p>
                 <p><strong>Price:</strong> $64.00</p>
                 <div class="card-actions">
                   <button class="add-to-cart"
@@ -105,15 +123,19 @@
 
           <!-- 4 -->
           <div class="creature-card">
-            <h3><a href="https://yelyaht.github.io/Museum/html/werewolf.html">Moon-Clasp Ritual Harness</a></h3>
+            <h3><a href="../collections/werewolf/werewolf.html">Moon-Clasp Ritual Harness</a></h3>
             <div class="card-content">
               <div class="card-image">
-                <img src="images/werart.jpg" alt="Werewolf image">
+                <img src="../../images/souvenir/werart.jpg" alt="Werewolf image">
               </div>
               <div class="card-text">
                 <p>
-                  Replica of the artifact. Woven from sinew, iron, and carved wolf-bone, this ancient harness once bound the chosen beneath the gaze of the moon. Etched with lunar phases and worn smooth by ritual use, it was unearthed from a sealed chamber beneath a collapsed stone circle in the Carpathian Basin. Fragments of blood and ash cling to its clasps—silent traces of ceremonies meant to summon or restrain the beast within.
-                </p>
+                  Replica of the artifact. Woven from sinew, iron, and carved wolf-bone, this ancient harness once
+                  bound the chosen beneath the gaze of the moon. Etched with lunar phases and worn smooth by ritual
+                  use, it was unearthed from a sealed chamber beneath a collapsed stone circle in the Carpathian Basin.
+                  Fragments of blood and ash cling to its clasps—silent traces of ceremonies meant to summon or restrain
+                  the beast within.</p>
+                  <p>Click the title to journey deeper into their lore and uncover the myths that shaped their legend.</p>
                 <p><strong>Price:</strong> $80.00</p>
                 <div class="card-actions">
                   <button class="add-to-cart"
@@ -128,15 +150,19 @@
 
           <!-- 5 -->
           <div class="creature-card">
-            <h3><a href="https://yelyaht.github.io/MuseumE/" class="creature-link">Sylvan Memory Circlet</a></h3>
+            <h3><a href="../collections/elven/elven.html" class="creature-link">Sylvan Memory Circlet</a></h3>
             <div class="card-content">
               <div class="card-image">
-                <img src="images/elfart.jpg" alt="Elven image">
+                <img src="../../images/souvenir/elfart.jpg" alt="Elven image">
               </div>
               <div class="card-text">
                 <p>
-                  Replica of the artifact that's braided from electrum and set with leaf-carved greenstones, this luminous circlet was unearthed from a solstice-aligned tomb deep within the Black Forest. Its etched vines and constellations speak of rites to preserve ancestral memory, while faint wear marks whisper of a life once crowned in quiet authority. Even now, under dim light, the gems seem to hold the glow of forgotten seasons.
-                </p>
+                  Replica of the artifact that's braided from electrum and set with leaf-carved greenstones, this
+                  luminous circlet was unearthed from a solstice-aligned tomb deep within the Black Forest. Its
+                  etched vines and constellations speak of rites to preserve ancestral memory, while faint wear
+                  marks whisper of a life once crowned in quiet authority. Even now, under dim light, the gems
+                  seem to hold the glow of forgotten seasons.</p>
+                  <p>Click the title to journey deeper into their lore and uncover the myths that shaped their legend.</p>
                 <p><strong>Price:</strong> $65.00</p>
                 <div class="card-actions">
                   <button class="add-to-cart"
@@ -151,15 +177,19 @@
 
           <!-- 6 -->
           <div class="creature-card">
-            <h3><a href="https://yelyaht.github.io/MuseumC/" class="creature-link">Cerberus Infernicus</a></h3>
+            <h3><a href="../collections/cerberus/cerberus.html" class="creature-link">Cerberus Infernicus</a></h3>
             <div class="card-content">
               <div class="card-image">
-                <img src="images/cerbart.jpg" alt="Cerberus image">
+                <img src="../../images/souvenir/cerbart.jpg" alt="Cerberus image">
               </div>
               <div class="card-text">
                 <p>
-                  Replica of the artifact, excavated from a scorched altar pit in the Sicilian Highlands, this fossilized triple-claw core bears the blackened sheen of volcanic fire and the weight of ancient myth. Its fused joint base and fractured tips hint at crushing force, while embedded sulfur crystals exude a faint, otherworldly scent. Said to be the remnant of the underworld’s gatekeeper, it stands as a grim relic of realms best left unopened.
-                </p>
+                  Replica of the artifact, excavated from a scorched altar pit in the Sicilian Highlands, this
+                  fossilized triple-claw core bears the blackened sheen of volcanic fire and the weight of ancient
+                  myth. Its fused joint base and fractured tips hint at crushing force, while embedded sulfur
+                  crystals exude a faint, otherworldly scent. Said to be the remnant of the underworld’s gatekeeper,
+                  it stands as a grim relic of realms best left unopened.</p>
+                  <p>Click the title to journey deeper into their lore and uncover the myths that shaped their legend.</p>
                 <p><strong>Price:</strong> $45.00</p>
                 <div class="card-actions">
                   <button class="add-to-cart"
@@ -171,7 +201,7 @@
               </div>
             </div>
           </div>
-        </div><!-- /creature-grid -->
+        </div>
 
         <p class="footer-note">More gifts coming soon...</p>
       </main>
@@ -184,14 +214,14 @@
   </div>
 
   <!-- Modal -->
-  <div id="imageModal" class="modal" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true">
-  <div class="modal-inner" role="document">
-    <button class="modal-close" tabindex="-1" aria-label="Close image (Esc)">&times;</button>
-    <img id="modalImg" alt="">
-    <p id="modalCaption" class="modal-caption" aria-hidden="true"></p>
+    <div id="imageModal" class="modal" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-inner" role="document">
+      <button class="modal-close" tabindex="-1" aria-label="Close image (Esc)">&times;</button>
+      <img id="modalImg" src="#" alt="">
+      <p id="modalCaption" class="modal-caption" aria-hidden="true"></p>
+    </div>
   </div>
-</div>
 
-  <script src="js/script.js"></script>
+  <script src="../../js/souvenir/shop.js"></script>
 </body>
 </html>

@@ -281,7 +281,7 @@ h2 + p {
 }
 
 .background-wrap {
-  background-image: url('../../images/banner.jpg');
+  background-image: url('../images/banner.jpg');
   background-size: 120% 100%;
   background-position: center;
   background-repeat: no-repeat;

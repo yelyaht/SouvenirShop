@@ -3,12 +3,12 @@ const LS_CART = 'mcm_cart_items';
 
 // Keys must exactly match the strings passed in your onclick attributes
 const CATALOG_BY_NAME = {
-  'Ventral Rib Fossil – Draconis Altiventris': { id: 'dragon_rib',  price: 90.00, image: '../../images/souvenir/dragart.jpg' },
-  'Laryngeal Crest of Siren Pelagis Nocturna': { id: 'siren_crest', price: 75.00, image: '../../images/souvenir/siart.jpg' },
-  'Bloodbound Cradle Stone':                   { id: 'vampire_stone', price: 64.00, image: '../../images/souvenir/vamart.jpg' },
-  'Moon-Clasp Ritual Harness':                 { id: 'wolf_harness',  price: 80.00, image: '../../images/souvenir/werart.jpg' },
-  'Sylvan Memory Circlet':                     { id: 'elf_circlet',   price: 65.00, image: '../../images/souvenir/elfart.jpg' },
-  'Calcified Paw Core – Cerberus Infernicus': { id: 'cerb_paw',     price: 45.00, image: '../../images/souvenir/cerbart.jpg' }
+  'Ventral Rib Fossil – Draconis Altiventris': { id: 'dragon_rib',  price: 90.00, image: '../images/dragart.jpg' },
+  'Laryngeal Crest of Siren Pelagis Nocturna': { id: 'siren_crest', price: 75.00, image: '../images/siart.jpg' },
+  'Bloodbound Cradle Stone':                   { id: 'vampire_stone', price: 64.00, image: '../images/vamart.jpg' },
+  'Moon-Clasp Ritual Harness':                 { id: 'wolf_harness',  price: 80.00, image: '../images/werart.jpg' },
+  'Sylvan Memory Circlet':                     { id: 'elf_circlet',   price: 65.00, image: '../images/elfart.jpg' },
+  'Calcified Paw Core – Cerberus Infernicus': { id: 'cerb_paw',     price: 45.00, image: '../images/cerbart.jpg' }
 };
 
 function getCart() { try { return JSON.parse(localStorage.getItem(LS_CART)) || []; } catch { return []; } }

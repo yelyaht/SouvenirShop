@@ -1,69 +1,39 @@
-// --- Add to cart: always +1 ---
-window.addToCart = function(itemName) {
-  alert(`Added 1 × ${itemName} to your cart! Functionality coming soon...`);
+// ===== Shop-side cart plumbing =====
+const LS_CART = 'mcm_cart_items';
+
+// Keys must exactly match the strings passed in your onclick attributes
+const CATALOG_BY_NAME = {
+  'Ventral Rib Fossil – Draconis Altiventris': { id: 'dragon_rib',  price: 90.00, image: '../../images/souvenir/dragart.jpg' },
+  'Laryngeal Crest of Siren Pelagis Nocturna': { id: 'siren_crest', price: 75.00, image: '../../images/souvenir/siart.jpg' },
+  'Bloodbound Cradle Stone':                   { id: 'vampire_stone', price: 64.00, image: '../../images/souvenir/vamart.jpg' },
+  'Moon-Clasp Ritual Harness':                 { id: 'wolf_harness',  price: 80.00, image: '../../images/souvenir/werart.jpg' },
+  'Sylvan Memory Circlet':                     { id: 'elf_circlet',   price: 65.00, image: '../../images/souvenir/elfart.jpg' },
+  'Calcified Paw Core – Cerberus Infernicus': { id: 'cerb_paw',     price: 45.00, image: '../../images/souvenir/cerbart.jpg' }
 };
 
-// --- Image Modal ---
-(() => {
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImg');
-  const modalCaption = document.getElementById('modalCaption');
-  const closeBtn = modal ? modal.querySelector('.modal-close') : null;
+function getCart() { try { return JSON.parse(localStorage.getItem(LS_CART)) || []; } catch { return []; } }
+function saveCart(items) { localStorage.setItem(LS_CART, JSON.stringify(items)); }
 
-  if (!modal || !modalImg || !closeBtn) return;
+// Optional: live count in header
+function updateHeaderCount() {
+  const count = getCart().reduce((s, it) => s + (it.qty || 0), 0);
+  const el = document.getElementById('cartCount');
+  if (el) el.textContent = String(count);
+}
 
-  function openModal(src, alt, captionText) {
-    modalImg.src = src;
-    modalImg.alt = alt || '';
+// --- Add to cart: always +1 (with alert) ---
+window.addToCart = function(itemName) {
+  const meta = CATALOG_BY_NAME[itemName];
+  if (!meta) { alert('Item not found.'); return; }
 
-    if (captionText) {
-      modalCaption.textContent = captionText;
-      modalCaption.removeAttribute('aria-hidden');
-    } else {
-      modalCaption.textContent = '';
-      modalCaption.setAttribute('aria-hidden', 'true');
-    }
+  const cart = getCart();
+  const idx = cart.findIndex(x => x.id === meta.id);
+  if (idx > -1) cart[idx].qty += 1;
+  else cart.push({ id: meta.id, name: itemName, unitPrice: meta.price, qty: 1, image: meta.image });
 
-    modal.classList.add('open');
-    document.body.classList.add('modal-open');
+  saveCart(cart);
+  alert(`Added 1 × ${itemName} to your cart!`);
+  updateHeaderCount();
+};
 
-    // Focus the modal container (not the button)
-    modal.setAttribute('tabindex', '-1');
-    modal.focus();
-  }
-
-  function closeModal() {
-    modal.classList.remove('open');
-    document.body.classList.remove('modal-open');
-    modalImg.src = '';
-    modalImg.alt = '';
-  }
-
-  // Open on any product image click
-  document.addEventListener('click', (e) => {
-    const img = e.target.closest('.card-image img');
-    if (!img) return;
-
-    const fullSrc = img.getAttribute('data-full') || img.src;
-    const alt = img.getAttribute('alt') || '';
-    const card = img.closest('.creature-card');
-    const captionText = card ? (card.querySelector('h3')?.innerText || '') : '';
-
-    openModal(fullSrc, alt, captionText);
-  });
-
-  // Close actions
-  closeBtn.addEventListener('click', closeModal);                 // <= you were missing this
-  closeBtn.addEventListener('mousedown', (e) => e.preventDefault()); // stop mouse/tap from focusing the button
-  closeBtn.addEventListener('click', () => closeBtn.blur());         // if it somehow gets focus, blur it
-
-  // Click outside inner to close
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-
-  // ESC to close
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-  });
-})();
+document.addEventListener('DOMContentLoaded', updateHeaderCount);
